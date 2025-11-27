@@ -3,3 +3,8 @@
 # Ask the user for their name and print the returned message.
     
 # Write your code here:
+name=int(input())
+def greet_person(name):
+    print(f"Hello, {name}!")
+greet_person(name)
+
