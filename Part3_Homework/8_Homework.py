@@ -19,3 +19,31 @@
 # Keep input() outside the functions.
 
 # Write your code here:
+def calculate_grade(score):
+	# assume score is an integer 0-100
+	if score >= 90:
+		return 'A'
+	if score >= 80:
+		return 'B'
+	if score >= 70:
+		return 'C'
+	if score >= 60:
+		return 'D'
+	return 'F'
+
+
+def display_report(score, grade):
+	print('Score:', score)
+	print('Grade:', grade)
+
+
+if __name__ == '__main__':
+	s = input('Enter the score: ')
+	try:
+		score = int(s)
+	except ValueError:
+		print('Please enter a whole number score (e.g. 85).')
+	else:
+		grade = calculate_grade(score)
+		display_report(score, grade)
+
